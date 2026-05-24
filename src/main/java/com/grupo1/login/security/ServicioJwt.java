@@ -26,8 +26,13 @@ public class ServicioJwt {
      * Incluye el email del usuario y su nivel de acceso (Rol). */
     public String generarToken(Usuario usuario) {
         return Jwts.builder()
+<<<<<<< HEAD
+                .setSubject(usuario.getEmail()) 
+                .claim("Rol", usuario.getRol().name()) 
+=======
                 .setSubject(usuario.getEmail()) // AQUI MEJORALO
                 .claim("Rol", usuario.getRol().name()) // AQUI MEJORALO
+>>>>>>> origin/main
                 .setIssuedAt(new Date()) // Fecha de creación del Token
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRACION)) // Fecha de expiración del Token
                 .signWith(LLAVE_SECRETA) // Cifrado de seguridad con la llave secreta
