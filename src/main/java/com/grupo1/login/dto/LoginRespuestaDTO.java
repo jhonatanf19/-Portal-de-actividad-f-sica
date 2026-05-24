@@ -1,7 +1,10 @@
 package com.grupo1.login.dto;
 
 import com.grupo1.login.model.Roles;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

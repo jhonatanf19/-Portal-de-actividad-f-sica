@@ -40,13 +40,18 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
+<<<<<<< HEAD
                         // públicas - login y recuperación
+=======
+                        // públicas
+>>>>>>> origin/main
                         .requestMatchers("/api/usuarios/login").permitAll()
                         .requestMatchers("/api/usuarios/registrar").permitAll()
                         .requestMatchers("/api/usuarios/forgot-password").permitAll()
                         .requestMatchers("/api/usuarios/reset-password").permitAll()
                         .requestMatchers("/api/usuarios/verificar-codigo").permitAll()
 
+<<<<<<< HEAD
                         // públicas - recuperación si usas otro controlador/ruta
                         .requestMatchers("/api/recuperacion/**").permitAll()
 
@@ -55,6 +60,11 @@ public class SecurityConfig {
                         .requestMatchers("/api/metas/**").permitAll()
                         .requestMatchers("/api/reportes/**").permitAll()
 
+=======
+                        // recuperación si usas otro controlador/ruta
+                        .requestMatchers("/api/recuperacion/**").permitAll()
+
+>>>>>>> origin/main
                         // admin protegida
                         .requestMatchers("/api/administrador/**").hasRole("ADMINISTRADOR")
 
@@ -78,7 +88,10 @@ public class SecurityConfig {
                 "http://loginspring.free.nf",
                 "https://loginspring.free.nf"
         ));
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setExposedHeaders(List.of("Authorization"));
@@ -86,7 +99,13 @@ public class SecurityConfig {
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
+<<<<<<< HEAD
 
         return source;
     }
 }
+=======
+        return source;
+    }
+}
+>>>>>>> origin/main

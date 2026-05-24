@@ -8,7 +8,11 @@
 		<version>4.0.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+<<<<<<< HEAD
 	<groupId>com.grupo1</groupId>
+=======
+	<groupId>com.grupo3</groupId>
+>>>>>>> origin/main
 	<artifactId>login</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>login</name>
