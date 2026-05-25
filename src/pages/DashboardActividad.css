@@ -1,0 +1,213 @@
+.actividad-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+.actividad-sidebar {
+  width: 240px;
+  background: #062344;
+  color: white;
+  padding: 24px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.actividad-sidebar h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.actividad-sidebar p {
+  margin: 4px 0 28px;
+  color: #bcd0e5;
+}
+
+.actividad-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actividad-sidebar nav a {
+  text-decoration: none;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.actividad-sidebar nav a:hover {
+  background: #2563eb;
+}
+
+.actividad-main {
+  margin-left: 240px;
+  padding: 28px;
+  width: calc(100% - 240px);
+}
+
+.actividad-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.actividad-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.actividad-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+}
+
+.actividad-header button,
+.form-card button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.actividad-header button:hover,
+.form-card button:hover {
+  background: #1d4ed8;
+}
+
+.mensaje {
+  background: #dbeafe;
+  border-left: 5px solid #2563eb;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #1e40af;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.card,
+.panel,
+.form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: #6b7280;
+}
+
+.card strong {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.card span {
+  color: #6b7280;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.forms-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card h2,
+.panel h2 {
+  margin-top: 0;
+}
+
+.form-card label {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-card input {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+}
+
+.form-card input:focus {
+  border-color: #2563eb;
+}
+
+.form-card button {
+  margin-top: 18px;
+}
+
+.reporte-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reporte-panel th,
+.reporte-panel td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.reporte-panel th {
+  background: #f9fafb;
+}
+
+@media (max-width: 900px) {
+  .actividad-sidebar {
+    position: static;
+    width: auto;
+  }
+
+  .actividad-page {
+    flex-direction: column;
+  }
+
+  .actividad-main {
+    margin-left: 0;
+    width: auto;
+  }
+
+  .cards,
+  .grid-section,
+  .forms-section {
+    grid-template-columns: 1fr;
+  }
+
+  .actividad-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
